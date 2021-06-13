@@ -12,8 +12,9 @@ function diffArray(arr1, arr2) {
     }
 
     const symmDiff = [];
-    for (let i = 0; i < union.length; i++){
-        const currentEl = union[i];
+    // for (let i = 0; i < union.length; i++){
+    //     const currentEl = union[i];
+    for(const currentEl of union){
         if (arr1.includes(currentEl) && !arr2.includes(currentEl)){
             symmDiff.push(currentEl);
         } else if (arr2.includes(currentEl) && !arr1.includes(currentEl)) {
