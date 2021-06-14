@@ -2,7 +2,8 @@ function destroyer(arr) {
     // const argArr = Array.from(arguments);
     const argArr = [...arguments].slice(1);
 
-    const filteredArr = arr.filter(el => !argArr.includes(el))
+    // const filteredArr = arr.filter(el => !argArr.includes(el))
+    return arr.filter(el => !argArr.includes(el))
 
     // const filteredArr = [];
     // // for (let i = 0; i < arr.length; i++){
