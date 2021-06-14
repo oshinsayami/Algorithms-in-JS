@@ -3,9 +3,10 @@ function destroyer(arr) {
     const argArr = [...arguments].slice(1);
 
     const filteredArr = [];
-    for (let i = 0; i < arr.length; i++){
-        if (!argArr.includes(arr[i])) {
-            filteredArr.push(arr[i])
+    // for (let i = 0; i < arr.length; i++){
+        for(const el of arr){
+        if (!argArr.includes(el)) {
+            filteredArr.push(el)
         }
     }
     return filteredArr;
