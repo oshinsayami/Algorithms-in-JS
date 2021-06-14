@@ -1,5 +1,4 @@
 //Binary search in JS
-let array = [5, 1, 9, 4, 3, 7, 2, 8, 6];
 
 function binarySearch(arr, value) {
     let high = arr.length - 1;
@@ -19,10 +18,10 @@ function binarySearch(arr, value) {
     return "Not found";
 }
 
+let array = [2,4,5,9,12,14,45,67,69,80,85];
+
 let sorted = array.sort(function (a, b) { return a - b });
 
-console.log(sorted);
+let foundNum = binarySearch(sorted, 67);
 
-let foundNum = binarySearch(sorted, 98);
-
-console.log(foundNum)
+console.log(foundNum);
