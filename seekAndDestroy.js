@@ -2,13 +2,15 @@ function destroyer(arr) {
     // const argArr = Array.from(arguments);
     const argArr = [...arguments].slice(1);
 
-    const filteredArr = [];
-    // for (let i = 0; i < arr.length; i++){
-        for(const el of arr){
-        if (!argArr.includes(el)) {
-            filteredArr.push(el)
-        }
-    }
+    const filteredArr = arr.filter(el => !argArr.includes(el))
+
+    // const filteredArr = [];
+    // // for (let i = 0; i < arr.length; i++){
+    //     for(const el of arr){
+    //     if (!argArr.includes(el)) {
+    //         filteredArr.push(el)
+    //     }
+    // }
     return filteredArr;
 }
 
