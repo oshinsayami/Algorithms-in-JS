@@ -1,9 +1,23 @@
 function whatIsInName(collection, source) {
-    const arr = [];
+    // const arr = [];
 
     const keys = Object.keys(source);
 
-    for (const obj of collection) {
+    // for (const obj of collection) {
+    //     let hasAllKeyValuePairs = true;
+    //     for (const key of keys) {
+    //         if (obj[key] !== source[key]) {
+    //             hasAllKeyValuePairs = false;
+    //             break;
+    //         }
+    //     }
+
+    //     if (hasAllKeyValuePairs) {
+    //         arr.push(obj);
+    //     }
+    // }
+
+    const arr = collection.filter(obj => {
         let hasAllKeyValuePairs = true;
         for (const key of keys) {
             if (obj[key] !== source[key]) {
@@ -11,11 +25,12 @@ function whatIsInName(collection, source) {
                 break;
             }
         }
-
         if (hasAllKeyValuePairs) {
-            arr.push(obj);
+            return true;
+        } else {
+            return false;
         }
-    }
+    });
     return arr;
 }
 
