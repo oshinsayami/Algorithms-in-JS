@@ -17,7 +17,7 @@ function whatIsInName(collection, source) {
     //     }
     // }
 
-    const arr = collection.filter(obj => {
+    return collection.filter(obj => {
         let hasAllKeyValuePairs = true;
         for (const key of keys) {
             if (obj[key] !== source[key]) {
@@ -25,13 +25,8 @@ function whatIsInName(collection, source) {
                 break;
             }
         }
-        if (hasAllKeyValuePairs) {
-            return true;
-        } else {
-            return false;
-        }
+        return hasAllKeyValuePairs;
     });
-    return arr;
 }
 
 console.log(whatIsInName([{ "apple": 1, "bat": 2 }, { "apple": 1 }, { "apple": 1 }, { "apple": 1, "bat": 2, "cookie": 2 }], { "apple": 1, "cookie": 2 }));
