@@ -18,7 +18,7 @@ function spinalCase(str) {
     if (word.length) {
         words.push(word);
     }
-    return words.join('-');
+        return words.join('-');
 }
 
 console.log(spinalCase("This Is Spinal Tap"));
