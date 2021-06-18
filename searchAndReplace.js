@@ -6,7 +6,14 @@ function myReplace(str, before, after) {
     } else {
         casedAfter = after[0].toLowerCase() + after.substring(1);
     }
-    return str.replace(before, casedAfter);
+    let replacedStr = str;
+    for (let i = 0; i < replacedStr.length; i++){
+        const iString = replacedStr.substring(i, i + before.length);
+        if (iString === before) {
+            replacedStr = replacedStr.substring(0, i) + casedAfter + replacedStr.substring(i + before.length);
+        }
+    }
+    return replacedStr;
 }
 
 console.log(myReplace("I am Good", "good", "bad"));
