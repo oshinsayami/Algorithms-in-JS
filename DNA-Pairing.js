@@ -15,9 +15,6 @@ const dnaDict = {
 
 // }
 
-const pairElement = (str) => {
-    const result = str.split('').map(c => [c, dnaDict[c]]);
-    return result;
-}
+const pairElement = (str) => str.split('').map(c => [c, dnaDict[c]]);
 
 console.log(pairElement("GCG"));
