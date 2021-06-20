@@ -1,11 +1,9 @@
 let a = [1, 2, 4, 5, 3, 2, 1, 6];
-let b = [];
-let length = a.length;
-
-for (let i = 0; i < length; i++){
-    if (b.indexOf(a[i]) === -1) {
-        b.push(a[i]);
-    }
+obj = {};
+for (let i of a) {
+    obj[i] = true;
 }
+
+let b = Object.keys(obj);
 
 console.log(b);
