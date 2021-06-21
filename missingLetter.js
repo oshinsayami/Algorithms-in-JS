@@ -1,5 +1,5 @@
 function fearNotLEtter(str) {
-    let output = '';
+    let output;
 
     for (let i = 0; i < str.length - 1; i++){
         const currentCode = str.charCodeAt(i);
@@ -10,9 +10,7 @@ function fearNotLEtter(str) {
             break;
         }
     }
-    if (output === '') {
-        return undefined;
-    }
+
     return output; 
 }
 
