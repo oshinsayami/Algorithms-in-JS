@@ -4,9 +4,8 @@ function uniteUnique(arr) {
 
     const newArr = arrOfArrs.flat();
 
-    const uniqArr = [...new Set(newArr)];
+    return [...new Set(newArr)];
 
-    return uniqArr;
 
     // const output = [];
     // for (const num of newArr) {
