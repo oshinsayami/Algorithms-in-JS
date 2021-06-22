@@ -2,12 +2,12 @@ function uniteUnique(arr) {
 
     const arrOfArrs = [...arguments];
 
+    const newArr = arrOfArrs.flat();
+
     const output = [];
-    for (const arr of arrOfArrs) {
-        for (const num of arr) {
-            if (!output.includes(num)) {
-                output.push(num);
-            }
+    for (const num of newArr) {
+        if (!output.includes(num)) {
+            output.push(num);
         }
     }
     return output;
