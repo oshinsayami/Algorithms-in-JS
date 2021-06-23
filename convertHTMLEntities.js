@@ -7,13 +7,7 @@ const htmlDict = {
 }
 
 
-function convertHTML(str) {
-    let output = '';
-
-    for (const char of str) {
-        return str.split('').map(char => char in htmlDict ? htmlDict[char] : char).join('');
-    }
-    return output;
-}
+const convertHTML= str =>
+    str.split('').map(char => char in htmlDict ? htmlDict[char] : char).join('');
 
 console.log(convertHTML("Dolce & Gabbana"));
