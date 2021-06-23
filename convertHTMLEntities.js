@@ -8,7 +8,7 @@ function convertHTML(str) {
             output += '&lt';
         } else if (char === '>') {
             output += '&gt';
-        } else if (char === '"' {
+        } else if (char === '"') {
             output += '&quot';
         } else if (char === "'") {
             output += '&apos';
@@ -16,6 +16,7 @@ function convertHTML(str) {
             output += char;
         }
     }
+    return output;
 }
 
 console.log(convertHTML("Dolce & Gabbana"));
