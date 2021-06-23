@@ -8,6 +8,6 @@ const htmlDict = {
 
 
 const convertHTML= str =>
-    str.split('').map(char => char in htmlDict ? htmlDict[char] : char).join('');
+    str.split('').map(char => htmlDict[char] || char).join('');
 
 console.log(convertHTML("Dolce & Gabbana"));
