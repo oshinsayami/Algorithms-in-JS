@@ -18,13 +18,7 @@ function sumPrime(num) {
         }
     }
 
-    let sum = 0;
-    for (const p of primeNumbers) {
-        sum += p;
-    }
-    console.log(primeNumbers);
-
-    return sum;
+    return primeNumbers.reduce((acc, p) => acc + p, 0);
 }
 
 console.log(sumPrime(10));
