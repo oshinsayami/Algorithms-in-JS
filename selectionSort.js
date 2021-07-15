@@ -1,4 +1,6 @@
-function selectionSort(array) {
+function selectionSort(arr) {
+
+    const array = arr.slice(); //making a copy
 
     for (let i = 0; i < array.length - 1; i++){
         let minIndex = i;
@@ -8,9 +10,10 @@ function selectionSort(array) {
             }
         }
 
-        const temp = array[i];
-        array[i] = array[minIndex];
-        array[minIndex] = temp;
+        [array[i], array[minIndex]] = [array[minIndex], array[i]];
+        // const temp = array[i];
+        // array[i] = array[minIndex];
+        // array[minIndex] = temp;
     }
     return array;
 }
