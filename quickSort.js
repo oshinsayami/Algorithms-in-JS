@@ -5,13 +5,22 @@ function quickSort(array) {
     const pivot = array[array.length - 1];
     const leftA = [];
     const rightA = [];
-    for (let i = 0; i < array.length - 1; i++){
-        if (array[i] < pivot) {
-            leftA.push(array[i]);
+
+    for (const el of array.slice(0, array.length)) {
+        if (el < pivot) {
+            leftA.push(el);
         } else {
-            rightA.push(array[i]);
+            rightA.push(el);
         }
     }
+
+    // for (let i = 0; i < array.length - 1; i++){
+    //     if (array[i] < pivot) {
+    //         leftA.push(array[i]);
+    //     } else {
+    //         rightA.push(array[i]);
+    //     }
+    // }
 
     if (leftA.length > 0 && rightA.length > 0) {
         return [...quickSort(leftA), pivot, ...quickSort(rightA)];
