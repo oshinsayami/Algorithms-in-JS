@@ -6,7 +6,7 @@ function quickSort(array) {
     const leftA = [];
     const rightA = [];
 
-    for (const el of array.slice(0, array.length)) {
+    for (const el of array.slice(0, array.length-1)) {
 
         el < pivot ? leftA.push(el) : rightA.push(el);
         // if (el < pivot) {
