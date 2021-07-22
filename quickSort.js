@@ -7,11 +7,13 @@ function quickSort(array) {
     const rightA = [];
 
     for (const el of array.slice(0, array.length)) {
-        if (el < pivot) {
-            leftA.push(el);
-        } else {
-            rightA.push(el);
-        }
+
+        el < pivot ? leftA.push(el) : rightA.push(el);
+        // if (el < pivot) {
+        //     leftA.push(el);
+        // } else {
+        //     rightA.push(el);
+        // }
     }
 
     // for (let i = 0; i < array.length - 1; i++){
